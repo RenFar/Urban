@@ -7,5 +7,7 @@ def getmatrix(n, m, value):
             row.append(value)
 
     return matrix
-print(getmatrix(2, 2, 10))
+print(getmatrix(4, 4, 4))
 print(range(12))
+
+
