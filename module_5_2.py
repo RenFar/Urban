@@ -8,6 +8,6 @@ def getmatrix(n, m, value):
 
     return matrix
 print(getmatrix(4, 4, 4))
-print(range(12))
+
 
 
