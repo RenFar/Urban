@@ -23,7 +23,7 @@ else:
         return password
 
 
-    print((podbor(n)))
+    print(podbor(n))
     spisok = "".join(map(str, podbor(n)))
 
     print(f" {n}  = {spisok}")
