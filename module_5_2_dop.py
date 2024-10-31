@@ -9,3 +9,4 @@ def get_triangle(n, value):
 
     return triangle
 print(get_triangle(5, 10))
+
