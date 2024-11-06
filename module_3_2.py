@@ -15,19 +15,15 @@ def send_email(message, recipient, *, sender = "university.help@gmail.com"):
     check_ru_sen = send.find(ru)
     check_net_rec = recip.find(net)
     check_net_sen = send.find(net)
-    check_dog = True
-    check_rec = True
-    check_sen = True
+
     if check_dog_sen == -1 or check_dog_rec == -1:
-        check_dog = False
+        print(f"Невозможно отправить письмо с адреса -  {sender} на адрес - {recipient}")
     elif check_com_rec == -1 and check_ru_rec == -1 and check_net_rec == -1:
-        check_rec = False
+        print(f"Невозможно отправить письмо с адреса -  {sender} на адрес - {recipient}")
     elif check_com_sen == -1 and check_ru_sen == -1  and check_net_rec == -1 and check_net_sen == -1:
-        check_sen = False
-        if check_dog == False or check_rec == False or check_sen == False:
-            print(f"Невозможно отправить письмо с адреса -  {sender} на адрес - {recipient}")
-        else:
-            print()
+
+        print(f"Невозможно отправить письмо с адреса -  {sender} на адрес - {recipient}")
+
     else:
         if recip == send:
             print('Нельзя отправить письмо самому себе!')
