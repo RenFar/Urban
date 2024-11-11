@@ -3,24 +3,20 @@ def send_email(message, recipient, *, sender = "university.help@gmail.com"):
     recip = str(recipient)
     send = str(sender)
 
-    dog ='@'
-    com = '.com'
-    ru = '.ru'
-    net = '.net'
-    check_dog_rec = recip.find(dog)
-    check_dog_sen = send.find(dog)
-    check_com_rec = recip.find(com)
-    check_com_sen = send.find(com)
-    check_ru_rec = recip.find(ru)
-    check_ru_sen = send.find(ru)
-    check_net_rec = recip.find(net)
-    check_net_sen = send.find(net)
+    check_dog_rec = recip.find("@")
+    check_dog_sen = send.find("@")
+    check_com_rec = recip.endswith('.com')
+    check_com_sen = send.endswith('.com')
+    check_ru_rec = recip.endswith('.ru')
+    check_ru_sen = send.endswith('.ru')
+    check_net_rec = recip.endswith('.net')
+    check_net_sen = send.endswith('.net')
 
     if check_dog_sen == -1 or check_dog_rec == -1:
         print(f"Невозможно отправить письмо с адреса -  {sender} на адрес - {recipient}")
-    elif check_com_rec == -1 and check_ru_rec == -1 and check_net_rec == -1:
+    elif check_com_rec == 0 and check_ru_rec == 0 and check_net_rec == 0:
         print(f"Невозможно отправить письмо с адреса -  {sender} на адрес - {recipient}")
-    elif check_com_sen == -1 and check_ru_sen == -1  and check_net_rec == -1 and check_net_sen == -1:
+    elif check_com_sen == 0 and check_ru_sen == 0  and check_net_rec == 0 and check_net_sen == 0:
 
         print(f"Невозможно отправить письмо с адреса -  {sender} на адрес - {recipient}")
 
