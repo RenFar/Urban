@@ -5,4 +5,4 @@ def test_function():
     inner_function()
 
 test_function()
-#inner_fuction()
+#inner_fuction() - ошибка, нет такой функции
