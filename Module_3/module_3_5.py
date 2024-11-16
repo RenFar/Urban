@@ -1,18 +1,15 @@
 
-def get_multiplied_didgits(number):
+def get_multiplied_digits(number):
     str_number = str(number)
-    first = str_number[0]
-    return first * get_multiplied_didgits(int(str_number[1:]))
-    second = int(str_number[1])
-    print(str_number)
-    print(first)
-    print(second)
-    str_number = int(str_number)
-    print(str_number)
+    first = int(str_number[0])
+    if len(str_number) == 1:
+        return first
+
+    return first * get_multiplied_digits(int(str_number[1:]))
 
 
+result = get_multiplied_digits(30303)
 
-
-print(get_multiplied_didgits(90502))
+print(result)
 
 
