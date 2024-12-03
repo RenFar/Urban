@@ -9,11 +9,14 @@ class House:
     def __eq__(self,other):
         if isinstance(other, House):
             return self.number_of_floors == other.number_of_floors
+        elif isinstance(other, int):
+            return self.number_of_floors == other.number_of_floors
         else:
             return False
 
     def __lt__(self,other):
-        return self.number_of_floors < other.number_of_floors
+        if isinstance(other, int):
+            return self.number_of_floors < other.number_of_floors
 
     def __le__(self, other):
         return self.number_of_floors <= other.number_of_floors
@@ -29,7 +32,6 @@ class House:
 
     def __add__(self, value):
         if isinstance(value, int):
-
             return House(self.name, self.number_of_floors + value)
         else:
             print('Ошибка!')
@@ -42,7 +44,7 @@ class House:
 
 
 
-h1 = House('ЖК Эльбрус"', 10)
+h1 = House('ЖК Эльбрус', 10)
 
 h2 = House('ЖК Акация', 20)
 
